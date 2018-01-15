@@ -14,6 +14,7 @@ Add sigle item to cart
     Wait Until Element Is Visible    css=button.ant-modal-close
     Click Button    css=button.ant-modal-close
     Wait Until Page Does Not Contain Element    css=button.ant-modal-close
+    Sleep    5 seconds
     ${item in cart} =    Get Text    id=topActionCartNumber
     Should Be Equal    1    ${item in cart}
 
@@ -36,6 +37,7 @@ Add multi item to cart
     Wait Until Element Is Visible    css=button.ant-modal-close
     Click Button    css=button.ant-modal-close
     Wait Until Page Does Not Contain Element    css=button.ant-modal-close
+    Sleep    5 seconds
     ${item in cart} =    Get Text    id=topActionCartNumber
     Should Be Equal    2    ${item in cart}
 
