@@ -20,6 +20,13 @@ Add multi item to cart
     ProductListPage.Add product by index to cart    3
     ProductListPage.Verify total number of product in cart    3
 
+Add multi item to cart with for loop
+    Homepage.Goto mobile product list page
+    :FOR    ${index}    IN RANGE    1    6
+    \    ProductListPage.Add product by index to cart    ${index}
+    \    LOG    Hello ${index}
+    ProductListPage.Verify total number of product in cart    5
+
 *** Keywords ***
 Test Suite Setup
     Open Browser    https://www.lazada.co.th/    browser=chrome
